@@ -2821,11 +2821,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   /* Если браузер поддерживает backdrop-filter */
 }
 
-@supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
   .slider-main__content {
     background: rgba(255, 255, 255, 0.72);
-    -webkit-backdrop-filter: blur(31px);
-            backdrop-filter: blur(31px);
+    -webkit-backdrop-filter: blur(1px);
+            backdrop-filter: blur(1px);
   }
 }
 
@@ -2934,6 +2934,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .products {
   padding-bottom: 44px;
+  margin-top: 150px;
 }
 
 .products__title {
