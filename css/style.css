@@ -837,6 +837,7 @@ ol.counter li:before {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+    border-radius: 50%;
 }
 
 body.ie ._ibg {
@@ -2768,6 +2769,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background-color: #cf9a01;
   color: #fff;
   width: 100%;
+  border-radius: 50%;
 }
 
 .slider-main {
