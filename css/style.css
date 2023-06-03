@@ -656,8 +656,8 @@ textarea.input {
 .slider-arrows {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (48px)[2];
-  grid-template-columns: repeat(2, 48px);
+  -ms-grid-columns: 48px 48px;
+  grid-template-columns: repeat(4, 48px);
   -webkit-column-gap: 8px;
      -moz-column-gap: 8px;
           column-gap: 8px;
@@ -2258,6 +2258,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   position: relative;
   width: 100%;
 }
+.header__logo img {
+  width: 100px;
+  }
+  @media (max-width: 767px) {
+    .header__logo img {
+      max-width: 70px; /* Нова ширина логотипу для мобільних пристроїв */
+    }
+  }
+  
 
 .header__search {
   padding-right: 32px;
