@@ -670,9 +670,17 @@ textarea.input {
   background-image: linear-gradient(to right, #f3b25d, #955c14, #fcc98a);
   font-size: 16px;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  border-width: 3px 2px 3px 2px;
+  border-style: solid;
+  border-color: #fac480 #f3b35e #be7f2e #f3b35e;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+
+.slider-arrow:hover {
+  transform: scale(1.2); /* Масштабування кнопки при наведенні курсору */
 }
 
 .slider-arrow_prev::before {
@@ -755,7 +763,7 @@ textarea.input {
 }
 
 .swiper-pagination-bullet-active::after {
-  background-color: #cf9a01;
+  background-image: linear-gradient(to right, #f3b25d, #955c14, #fcc98a);;
 }
 
 .swiper-pagination-bullet-active::before {
@@ -2205,7 +2213,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .header._scroll .header__wrapper {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-image: linear-gradient(to right, #000000, #501E1F, #9A4505)
 }
 
 .header._scroll .header__body {
@@ -2251,7 +2259,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .header__logo {
-  max-width: 360px; /* Максимальна ширина батьківського елемента */
+  max-width: 240px; /* Максимальна ширина батьківського елемента */
   margin: 0 auto; /* Вирівнювання по центру */
 }
 
@@ -2306,7 +2314,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .menu__link {
   font-weight: 700;
-  color: inherit;
+  color: #fff;
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
@@ -2318,15 +2326,17 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   font-size: 8px;
+  color: #fff;
 }
 
 .menu__sub-list {
   position: relative;
-  background-color: #cf9a01;
+  background-image: linear-gradient(to right, #f3b25d, #955c14, #fcc98a);
   padding: 15px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
+          
 }
 
 .menu__sub-item:not(:last-child) {
@@ -2402,7 +2412,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .actions-header__item_favorites {
-  color: #020202;
+  color: #fff;
   font-size: 24px;
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
@@ -2417,7 +2427,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .cart-header__icon {
-  color: #000000;
+  color: #fff;
   font-size: 24px;
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
@@ -2722,7 +2732,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .main-slider {
   background: 
   #D9CCC3;
-}
+  }
+
 
 .main-slider__container {
   position: relative;
@@ -2741,6 +2752,20 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       -ms-flex: 0 0 39.8387096774%;
           flex: 0 0 39.8387096774%;
   margin-bottom: 80px;
+  opacity: 0;
+    transform: translateX(-100%);
+    animation: slideInLeft 1.0s forwards;
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
 }
 
 .main-slider__slider {
@@ -2761,6 +2786,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   padding-top: 60px;
   padding-bottom: 60px;
   border-radius: 10px;
+  
 }
 
 .content-main__title {
@@ -2787,7 +2813,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .content-main__button {
   font-weight: 600;
   min-height: 78px;
-  font-size: 20px;
+  font-size: 24px;
   background-image: linear-gradient(to right, #f3b25d, #955c14, #fcc98a);
   color: #fff;
   width: 100%;
@@ -2847,6 +2873,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background: rgba(255, 255, 255, 0.9);
   /* Если браузер поддерживает backdrop-filter */
   border-radius: 10px;
+  
 }
 
 @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
@@ -4106,6 +4133,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     left: 0;
     width: 100%;
   }
+
+  .icon-menu {
+    margin-left: calc(15px + 17 * ((100vw - 320px)/ 950));
+}
 
   .icon-menu {
     margin-left: 32px;
