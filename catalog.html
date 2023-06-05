@@ -5,7 +5,7 @@
     <title>Territoria Coffee</title>
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="favicon.ico">
     <!-- <meta name="robots" content="noindex, nofollow"> -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
@@ -18,12 +18,13 @@
             <div class="header__wrapper">
                 <div class="header__container _container">
                     <div class="header__body">
-                        <div class="header__main">
-                            <a href="index.html" class="logo">
-                                <img src="img/logo/logo.png">
-                            </a>
+                        <a href="index.html" class="header__logo">
+                            <img src="img/logo/Logo.webp" alt="Логотип">
+                          </a>
+                        <div class="header__main">                           
                             <div class="header__menu menu">
                                 <nav class="menu__body">
+                                    
                                     <ul data-spollers="768,max" class="menu__list">
                                         <li class="menu__item">
                                             <a href="coffee.html" class="menu__link">Кава</a>
@@ -51,8 +52,7 @@
                                         </li>
                                         <li class="menu__item">
                                             <a href="tea.html" class="menu__link">Чай</a>
-                                            <button data-spoller type="button"
-                                                class="menu__arrow _icon-arrow-down"></button>
+                                            <button data-spoller type="button" class="menu__arrow _icon-arrow-down"></button>
                                             <ul class="menu__sub-list">
                                                 <li class="menu__sub-item">
                                                     <a href="black-tea.html" class="menu__sub-link">Чай чорний</a>
@@ -69,19 +69,58 @@
                                                 <li class="menu__sub-item">
                                                     <a href="" class="menu__sub-link">Трав'яний Чай</a>
                                                 </li>
-
+                                                
                                             </ul>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="" class="menu__link">Контакти</a>
+                                            <button data-spoller type="button" class="menu__arrow _icon-arrow-down"></button>
+                                            <ul class="menu__sub-list">
+                                                <li class="menu__sub-item">
+                                                    <a href="tel:+62894563455" class="contacts-footer__item _icon-phone">+380 (95) 493-44-16</a>
+                                                </li>
+                                                <li class="menu__sub-item">
+                                                    <a href="tel:+62894563455" class="contacts-footer__item _icon-phone">
+                                                        +380 (67) 493-44-19</a>
+                                                </li>
+                                                
+                                                
+                                                
+                                                
+                                            </ul>
+                                        </li>
                                     </ul>
-
+                                        
                                 </nav>
                             </div>
                         </div>
-
+                        <div class="header__search">
+                            <div class="search-form">
+                                <button type="button" class="search-form__icon _icon-search"></button>
+                                <form action="#" class="search-form__item">
+                                    <button type="submit" class="search-form__btn _icon-search"></button>
+                                    <input autocomplete="off" type="text" name="form[]" data-value="Пошук" class="search-form__input">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="header__actions actions-header">
+                            <a href="" class="actions-header__item actions-header__item_favorites _icon-favorite"></a>
+                            <div class="actions-header__item cart-header">
+                                <a href="" class="cart-header__icon _icon-cart"></a>
+                                <div class="cart-header__body">
+                                    <ul class="cart-header__list cart-list"></ul>
+                                </div>
+                            </div>
+                            <a href="" class="actions-header__item actions-header__item_user _ibg">
+                                <picture>
+                                    <source srcset="img/avatar.webp" type="image/webp"><img src="img/avatar.jpg" alt="Avatar"></picture>
+                            </a>
+                        
                         <button type="button" class="icon-menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
                     </div>
                 </div>
             </div>

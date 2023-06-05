@@ -192,7 +192,7 @@ h6 {
 }
 
 body {
-  color: #cf9a01;
+  color: #000000;
 }
 
 body._lock {
@@ -665,10 +665,10 @@ textarea.input {
 
 .slider-arrow {
   pointer-events: auto;
-  border-radius: 50%;
+  border-radius: 10px;
   height: 48px;
-  background-color: #cf9a01;
-  font-size: 12px;
+  background-image: linear-gradient(to right, #f3b25d, #955c14, #fcc98a);
+  font-size: 16px;
   cursor: pointer;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -2250,26 +2250,35 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
           flex: 0 0 39.8387096774%;
 }
 
+.header__logo {
+  max-width: 360px; /* Максимальна ширина батьківського елемента */
+  margin: 0 auto; /* Вирівнювання по центру */
+}
+
 .header__logo img {
-  display: flex;
-  max-width: 90px;
+  display: inline-block;
+  max-width: 100%;
   padding-left: 5px;
   padding-right: 5px;
   position: relative;
-  width: 100%;
+  transform: scale(1); /* Початковий розмір логотипу */
+  transition: transform 0.3s ease; /* Анімація зміни масштабу */
 }
-.header__logo img {
-  width: 100px;
+
+.header__logo img:hover {
+  transform: scale(1.3); /* Масштабування логотипу при наведенні курсору */
+}
+
+@media (max-width: 767px) {
+  .header__logo img {
+    max-width: 110px; /* Нова ширина логотипу для мобільних пристроїв */
   }
-  @media (max-width: 767px) {
-    .header__logo img {
-      max-width: 70px; /* Нова ширина логотипу для мобільних пристроїв */
-    }
-  }
+}
   
 
 .header__search {
   padding-right: 32px;
+  border-radius: 10px;
 }
 
 .menu {
@@ -2296,7 +2305,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .menu__link {
-  font-weight: 500;
+  font-weight: 700;
   color: inherit;
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
@@ -2358,6 +2367,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+          border-radius: 10px;
 }
 
 .search-form__btn {
@@ -2367,6 +2377,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   height: 45px;
   font-size: 15px;
   color: #cf9a01;
+  border-radius: 10px;
 }
 
 .search-form__input {
@@ -2391,7 +2402,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .actions-header__item_favorites {
-  color: #cf9a01;
+  color: #020202;
   font-size: 24px;
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
@@ -2406,7 +2417,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .cart-header__icon {
-  color: #cf9a01;
+  color: #000000;
   font-size: 24px;
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
@@ -2709,7 +2720,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .main-slider {
-  background: #fcf8f3;
+  background: 
+  #D9CCC3;
 }
 
 .main-slider__container {
@@ -2748,6 +2760,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background: rgba(255, 255, 255, 0.72);
   padding-top: 60px;
   padding-bottom: 60px;
+  border-radius: 10px;
 }
 
 .content-main__title {
@@ -2775,10 +2788,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-weight: 600;
   min-height: 78px;
   font-size: 20px;
-  background-color: #cf9a01;
+  background-image: linear-gradient(to right, #f3b25d, #955c14, #fcc98a);
   color: #fff;
   width: 100%;
-  border-radius: 50%;
+  border-radius: 10px;
+  border-width: 3px 2px 3px 2px;
+  border-style: solid;
+  border-color: #fac480 #f3b35e #be7f2e #f3b35e;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
 }
 
 .slider-main {
@@ -2828,6 +2846,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   padding: 24px;
   background: rgba(255, 255, 255, 0.9);
   /* Если браузер поддерживает backdrop-filter */
+  border-radius: 10px;
 }
 
 @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
@@ -2982,6 +3001,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  border-radius: 10px;
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
 }
 
 .item-product__labels {
@@ -3015,6 +3039,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
           align-items: center;
   color: #fff;
   font-weight: 500;
+  
 }
 
 .item-product__label:not(:last-child) {
@@ -3058,6 +3083,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-weight: 600;
   line-height: 120%;
   margin: 0px 0px 0.3333333333em 0px;
+  
 }
 
 .item-product__text {
@@ -3615,7 +3641,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .main-slider__container::before {
     content: "";
-    background: #f9f1e7;
+    background-image: linear-gradient(to right, #000000, #501E1F, #9A4505);
     position: absolute;
     top: 0;
     width: 100vw;
@@ -4049,7 +4075,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .menu__link {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .menu__arrow {
@@ -4285,7 +4311,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 
   .content-main__button:hover {
-    background: #ed863ff5;
+    background: #f1ad53;
+    transform: translateY(2px);
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
   }
 
   .item-product:hover .item-product__actions {
