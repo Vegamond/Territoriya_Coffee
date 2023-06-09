@@ -157,6 +157,7 @@ input::-ms-clear {
 button {
   cursor: pointer;
   background-color: inherit;
+  display: none;
 }
 
 button::-moz-focus-inner {
@@ -1813,7 +1814,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .group {
-  *zoom: 1;
+  zoom: 1;
 }
 
 .group:before,
@@ -4140,39 +4141,60 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 
   .icon-menu {
+    display: none; /* Початково ховаємо кнопку на десктопних пристроях */
+  }
+  
+  .mobile-menu {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 90px;
+    right: 40px;
     z-index: 9999;
-    background-color: linear-gradient(to right, #f3b25d, #955c14, #fcc98a);
-    border-width: 3px 2px 3px 2px;
-    border-style: solid;
-    border-color: #fac480 #f3b35e #be7f2e #f3b35e;
-    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2);
-    transform: scale(1);
-    transition: transform 0.3s;
+    background: transparent;
+    border: none;
     cursor: pointer;
-    border-radius: 50%;
-    font-size: 24px;
   }
   
-  .icon-menu span {
-    display: block;
-    width: 40px;
-    height: 4px;
-    margin-bottom: 4px;
-    background-color: #000;
+  .mobile-menu img {
+    width: 60px;
+    height: 60px;
   }
   
-  /* Додайте стилі для активного стану кнопки при необхідності */
-  .icon-menu._active span:first-child {
-    transform: rotate(-45deg);
-    top: calc(50% - 1px);
-  }
+  /* Додаткові стилі для відображення кнопки меню на мобільних пристроях */
+  @media (max-width: 767px) {
+    .mobile-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #805722;
+      box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
   
-  .icon-menu._active span:last-child {
-    transform: rotate(45deg);
-    bottom: calc(50% - 1px);
+    .mobile-menu:hover {
+      transform: scale(1.1);
+    }
+  
+    .mobile-menu span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      margin-bottom: 4px;
+      background-color: #000;
+    }
+  
+    /* Додайте стилі для активного стану кнопки при необхідності */
+    .mobile-menu._active span:first-child {
+      transform: rotate(-45deg);
+      top: calc(50% - 1px);
+    }
+  
+    .mobile-menu._active span:last-child {
+      transform: rotate(45deg);
+      bottom: calc(50% - 1px);
+    }
   }
 
   .menu-footer__column {
